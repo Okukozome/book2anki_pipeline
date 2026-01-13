@@ -6,10 +6,12 @@ dist/
 wheels/
 *.egg-info
 
+# custom
 *.pdf
 *.jpg
 *.png
 poppler-25.12.0
+temp
 
 # Virtual environments
 .venv
