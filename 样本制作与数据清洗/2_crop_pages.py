@@ -8,9 +8,9 @@ OUTPUT_DIR = "cropped_pages_dir"
 
 # 裁剪框定义: (左, 上, 右, 下) 坐标
 # 奇数页
-ODD_PAGE_CROP_BOX = (376, 252, 2197, 3120)
+ODD_PAGE_CROP_BOX = (376, 255, 2197, 3120)
 # 偶数页
-EVEN_PAGE_CROP_BOX = (274, 252, 2095, 3120)
+EVEN_PAGE_CROP_BOX = (274, 255, 2095, 3120)
 
 def crop_pages():
     input_path = Path(INPUT_DIR)
