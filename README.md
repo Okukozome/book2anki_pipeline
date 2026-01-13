@@ -24,7 +24,7 @@ https://github.com/oschwartz10612/poppler-windows/releases/download/v25.12.0-0/R
 ├─ ...
 └─pharma_card_extractor
     ├─药理学.pdf <-- PDF 的位置在这里
-    ├─1_split_pdf.py
+    ├─step1_split_pdf.py
     ├─...
     └─poppler-25.12.0 <-- poppler-windows 的位置在这里
        ├─Library
