@@ -4,7 +4,7 @@ from PIL import Image
 from pathlib import Path
 
 # 配置区域
-CROPPED_DIR = "cropped_pages_dir"
+CROPPED_DIR = "cropped_pages_tricolor"
 CONFIG_FILE = "long_image.json"
 
 # 指定正文的起始页码和结束页码（文件名中的数字）
