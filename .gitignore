@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+*.pdf
+*.jpg
+*.png
+poppler-25.12.0
+
+# Virtual environments
+.venv
