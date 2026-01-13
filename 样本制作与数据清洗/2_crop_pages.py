@@ -17,8 +17,8 @@ def crop_pages():
     output_path = Path(OUTPUT_DIR)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # 获取所有数字命名的jpg文件并按数字顺序排序
-    files = sorted(input_path.glob("*.jpg"), key=lambda x: int(x.stem))
+    # 获取所有数字命名的png文件并按数字顺序排序
+    files = sorted(input_path.glob("*.png"), key=lambda x: int(x.stem))
 
     if not files:
         print("未找到源图片，请先运行步骤1。")
@@ -40,11 +40,14 @@ def crop_pages():
                 # 执行裁剪
                 cropped_img = img.crop(box)
 
-                # 保存到新目录
-                save_path = output_path / f"{page_num}.jpg"
+                # 二值化白色
+                cropped_img = cropped_img.point(lambda p: 255 if p > 240 else p)
 
-                # 保持高质量
-                cropped_img.save(save_path, quality=95)
+                # 保存到新目录
+                save_path = output_path / f"{page_num}.png"
+
+                # 保存
+                cropped_img.save(save_path)
 
             if page_num % 50 == 0:
                 print(f"已处理至第 {page_num} 页...")

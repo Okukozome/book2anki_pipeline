@@ -22,16 +22,16 @@ def split_pdf():
             PDF_PATH,
             dpi=DPI,
             output_folder=OUTPUT_DIR,
-            fmt='jpeg',
+            fmt='png',
             output_file='page',
             poppler_path=POPPLER_PATH,
             paths_only=True
         )
 
         print("PDF拆分完成，正在重命名文件...")
-        files = sorted(list(output_path.glob("*.jpg")))
+        files = sorted(list(output_path.glob("*.png")))
         for i, file_path in enumerate(files):
-            new_name = output_path / f"{i + 1}.jpg"
+            new_name = output_path / f"{i + 1}.png"
             if new_name.exists() and new_name != file_path:
                 os.remove(new_name)
             os.rename(file_path, new_name)

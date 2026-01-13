@@ -36,7 +36,7 @@ class VirtualLongImage:
         self.end_index = end_idx
 
         # 验证第一张图以获取尺寸
-        first_img_path = os.path.join(source_dir, f"{start_idx}.jpg")
+        first_img_path = os.path.join(source_dir, f"{start_idx}.png")
         if not os.path.exists(first_img_path):
             raise FileNotFoundError(f"起始页不存在: {first_img_path}")
 
@@ -45,7 +45,7 @@ class VirtualLongImage:
 
         # 检查所有文件是否存在
         for i in range(start_idx, end_idx + 1):
-            p = os.path.join(source_dir, f"{i}.jpg")
+            p = os.path.join(source_dir, f"{i}.png")
             if not os.path.exists(p):
                 raise FileNotFoundError(f"缺失文件: {p}")
 
@@ -96,7 +96,7 @@ class VirtualLongImage:
 
         for offset in range(first_page_offset, last_page_offset + 1):
             real_page_num = self.start_index + offset
-            img_path = os.path.join(self.source_dir, f"{real_page_num}.jpg")
+            img_path = os.path.join(self.source_dir, f"{real_page_num}.png")
 
             with Image.open(img_path) as page_img:
                 # 当前页在全局坐标中的起始 Y
@@ -145,7 +145,7 @@ if __name__ == "__main__":
         print(f"正在测试跨页切片: Y轴 {test_y_start} - {test_y_end} ...")
         slice_img = v_img.get_slice(test_y_start, test_y_end)
 
-        slice_save_path = "test_slice.jpg"
+        slice_save_path = "test_slice.png"
         slice_img.save(slice_save_path)
         print(f"测试切片已保存为 {slice_save_path}，请检查拼接处是否自然。")
 
