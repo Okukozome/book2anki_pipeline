@@ -2,12 +2,16 @@
 
 #### 原始 PDF
 
-请将待处理的 PDF 复制到 `./pharma_card_extractor` 下，命名为 `药理学.pdf`。
+本项目参考 《药理学（第10版）- 杨宝峰,陈建国 - 人民卫生出版社》
+
+请将其数字版（**请勿使用扫描版**） PDF 复制到 `./pharma_card_extractor` 下，命名为 `药理学.pdf`。
 
 #### poppler-windows
 
 项目依赖 `poppler-windows` ，下载 URL：
+
 https://github.com/oschwartz10612/poppler-windows/releases/download/v25.12.0-0/Release-25.12.0-0.zip
+
 下载后解压后，移动 `poppler-25.12.0` 到 `./pharma_card_extractor` 下。
 
 -----
