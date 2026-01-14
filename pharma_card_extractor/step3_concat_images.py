@@ -2,8 +2,9 @@ import os
 from pathlib import Path
 from PIL import Image
 
-# 配置区域
-# 起止页码 (根据 long_image.json 的提示)
+# === 配置区域 ===
+
+# 起止页码（排除封面、目录、书末）
 START_PAGE_INDEX = 30
 END_PAGE_INDEX = 498
 
@@ -15,7 +16,7 @@ DIR_TRICOLOR = "cropped_pages_tricolor"
 OUT_FILENAME_CLEAN = "long_image_clean.png"
 OUT_FILENAME_TRICOLOR = "long_image_tricolor.png"
 
-# 解除 PIL 的像素限制，防止处理大图时报错，注意最好有16GB+内存
+# 解除 PIL 的像素限制，防止处理大图时报错，最好有16GB+内存
 Image.MAX_IMAGE_PIXELS = None
 
 

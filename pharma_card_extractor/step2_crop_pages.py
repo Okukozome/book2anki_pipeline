@@ -3,7 +3,8 @@ import numpy as np
 from PIL import Image
 from pathlib import Path
 
-# 配置区域
+# === 配置区域 ===
+
 # 路径配置
 INPUT_DIR = "raw_pages_dir"  # 输入: 原始图片目录
 OUTPUT_DIR_CLEAN = "cropped_pages_clean"  # 输出1: 仅清洗背景 (适合OCR)

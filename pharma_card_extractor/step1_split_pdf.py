@@ -2,7 +2,7 @@ import os
 from pdf2image import convert_from_path
 from pathlib import Path
 
-# 配置区域
+# === 配置区域 ===
 PDF_PATH = r"药理学.pdf"  # PDF文件名
 OUTPUT_DIR = "raw_pages_dir"  # 输出目录
 DPI = 300
