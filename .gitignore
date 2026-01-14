@@ -13,6 +13,7 @@ wheels/
 *.png
 poppler-25.12.0
 temp
+.env
 
 # Virtual environments
 .venv

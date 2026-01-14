@@ -4,7 +4,7 @@
 
 本项目参考 《药理学（第10版）- 杨宝峰,陈建国 - 人民卫生出版社》
 
-请将其数字版（**请勿使用扫描版**） PDF 复制到 `./pharma_card_extractor` 下，命名为 `药理学.pdf`。
+请将其数字版**（请勿使用扫描版）** PDF 复制到 `./pharma_card_extractor` 下，命名为 `药理学.pdf`。
 
 #### poppler-windows
 
